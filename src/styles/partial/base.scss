@@ -1,0 +1,10 @@
+// @import "typo.css";
+
+$prim: #383838;
+$sec: #d0d0d0;
+$font_1: arial, sans-serif;
+body {
+  color: $sec;
+  background-color: $prim;
+  font-family: $font_1;
+}
