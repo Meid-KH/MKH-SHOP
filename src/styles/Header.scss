@@ -1,0 +1,25 @@
+@import "./partial/base";
+
+#logo {
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  span {
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 0;
+  }
+}
+#Header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 30px 0;
+  .nav {
+    a {
+      padding: 10px 15px;
+      font-size: 16px;
+      letter-spacing: 0.3px;
+    }
+  }
+}

@@ -1,12 +1,9 @@
 import React, { Component } from "react";
+import Layout from "../components/Layout";
 
-export class ShopPage extends Component {
+class ShopPage extends Component {
   render() {
-    return (
-      <div>
-        <h1>This is ShopPage</h1>
-      </div>
-    );
+    return <Layout>here is Shop page</Layout>;
   }
 }
 
