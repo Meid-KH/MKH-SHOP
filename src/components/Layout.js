@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <div className="app_layout">
       <Header />
-      <main className="container">{children}</main>
+      <main className="container py-4 mb-5">{children}</main>
       <Footer />
     </div>
   );

@@ -1,9 +1,10 @@
-// @import "typo.css";
+// @import "typo.scss";
+@import "bootstrap-grid.min.scss";
 
 $sec: #d9d9d9;
 $prim: #262626;
 $hvr: #fff;
-$font_1: arial, sans-serif;
+$font_1: "Roboto", sans-serif;
 * {
   margin: 0px;
 }
@@ -30,7 +31,25 @@ li {
   list-style-type: none;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 15px;
+}
+.title {
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  position: relative;
+  &::after {
+    content: "";
+    height: 3px;
+    width: 50px;
+    max-width: 80%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: currentColor;
+  }
 }

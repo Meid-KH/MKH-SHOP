@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import InputField from "../InputField";
+import InputField from "../elements/InputField";
+import Button from "../elements/Button";
 
 class SignUp extends Component {
   constructor(props) {
@@ -29,11 +30,12 @@ class SignUp extends Component {
     const { name, email, password } = this.state;
 
     return (
-      <div className="sign_up">
-        <h2>Sign Up</h2>
+      <div className="_form sign_up">
         <form onSubmit={this.handleSubmit}>
+          <h2 className="title">Sign Up</h2>
           <InputField
             label="Name"
+            placeholder="Your name.."
             type="text"
             name="name"
             value={name}
@@ -41,6 +43,7 @@ class SignUp extends Component {
           />
           <InputField
             label="Email"
+            placeholder="Your email.."
             type="email"
             name="email"
             value={email}
@@ -48,12 +51,15 @@ class SignUp extends Component {
           />
           <InputField
             label="Password"
+            placeholder="Your password.."
             type="password"
             name="password"
             value={password}
             onChange={this.handleChange}
           />
-          <button type="submit">Sign Up</button>
+          <div className="d-flex flex-wrap justify-content-between pt-3">
+            <Button type="submit" classes="button _signup" content="Sign up" />
+          </div>
         </form>
       </div>
     );

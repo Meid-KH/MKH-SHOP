@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import InputField from "../InputField";
+import InputField from "../elements/InputField";
+import Button from "../elements/Button";
 
 class SignIn extends Component {
   constructor(props) {
@@ -25,11 +26,12 @@ class SignIn extends Component {
     const { email, password } = this.state;
 
     return (
-      <div className="sign_in">
-        <h2>Sign In</h2>
+      <div className="_form sign_in">
         <form onSubmit={this.handleSubmit}>
+          <h2 className="title">Sign In</h2>
           <InputField
             label="Email"
+            placeholder="Your Email.."
             type="text"
             name="email"
             value={email}
@@ -37,12 +39,19 @@ class SignIn extends Component {
           />
           <InputField
             label="Password"
+            placeholder="Your password.."
             type="password"
             name="password"
             value={password}
             onChange={this.handleChange}
           />
-          <button type="submit">Sign In</button>
+          <div className="d-flex flex-wrap justify-content-between pt-3">
+            <Button type="submit" classes="button _signin" content="Sign in" />
+            <Button
+              classes="button google_signin active"
+              content="Sign in with Google"
+            />
+          </div>
         </form>
       </div>
     );
